@@ -53,7 +53,7 @@ $pagenum = ceil($crow['count']/$pagesize);
 <div id="wrap">
     <p><a href="./admin/comment.add.php">发布留言</a>&nbsp;&nbsp;&nbsp;<a
             href="./admin/comment.manage.php">管理留言</a></p>
-    <span id="manage"><a href="login.php">登录</a><span>/</span><a href="#">注册</a></span>
+    <span id="manage"><a href="login.html">登录</a><span>/</span><a href="reg.html">注册</a></span>
     <?php
     if(!empty($data)){
         foreach ($data as $value){

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册界面</title>
+</head>
+<script language="JavaScript">
+    function checkreg() {
+        if (regform.adminname.value ==""){
+            alert ("请输入用户名");
+            return (false);
+        }
+        if (regform.adminpwd.value ==""){
+            alert ("请输入密码");
+            return (false);
+        }
+        if (regform.adminpwd.value !=resform.adminpwd2.value){
+            alert ("请输入密码");
+            return (false);
+        }
+        if (regform.adminemail.value ==""){
+            alert ("请输入邮箱");
+            return (false);
+        }
+    }
+</script>
+<body>
+<div id="main">
+    <form action="regevent.php" id="regform" method="post" onsubmit="return checkreg(this)" name="regform">
+        <p><h1>用户登录</h1></p>
+        <p><label for="adminname">请输入用户名：</label><input type="text" id="adminname" name="adminname"></p>
+        <p><label for="adminpwd">请输入用户密码：</label><input type="password" id="adminpwd" name="adminpwd"></p>
+        <p><label for="adminpwd2">请重复输入输入用户密码：</label><input type="password" id="adminpwd2" name="adminpwd2"></p>
+        <p><label for="adminemail">请输入用户邮箱：</label><input type="text" id="adminemail" name="adminemail"></p>
+        <p><input type="submit" id="submit" value="登录" name="submit"></p>
+
+    </form>
+</div>
+</body>
+</html>

@@ -3,7 +3,7 @@ require_once ("../connect.php");
 $sql = "UPDATE comment SET nickname = ?,comment = ?,email = ?,commenttime = ? WHERE id = ?";
 $mysqli_stmt = $mysqli->prepare($sql);
 $mysqli_stmt->bind_param('sssii',$username,$comment,$email,$commenttime, $id);
-if(!(isset($_POST['username'])&&(!empty($_POST['username'])))) {
+if(!(isset($_POST['nickname'])&&(!empty($_POST['nickname'])))) {
     echo "<script>alert('用户名设置出错‘);window.location.href = 'comment.add.php'</script>";
 }
 $id = $_POST['id'];
